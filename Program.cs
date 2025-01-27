@@ -9,6 +9,7 @@ class Program
         while (running)
         {
             Console.WriteLine("Welcome to the Calculator!");
+            Console.WriteLine();
             Console.WriteLine("Choose an operation:");
             Console.WriteLine("1. Addition");
             Console.WriteLine("2. Subtraction");
@@ -60,33 +61,34 @@ class Program
             }
 
             Console.WriteLine($"Result: {result}");
-            Console.WriteLine(); // Add a blank line for readability
+            Console.WriteLine("");
+        
         }
     }
 
     // Overloaded methods for different operations
-    static double Add(double a, double b)
+    static double Add(double num1, double num2)
     {
-        return a + b;
+        return num1 + num2;
     }
 
-    static double Subtract(double a, double b)
+    static double Subtract(double num1, double num2)
     {
-        return a - b;
+        return num1 - num2;
     }
 
-    static double Multiply(double a, double b)
+    static double Multiply(double num1, double num2)
     {
-        return a * b;
+        return num1 * num2;
     }
 
-    static double Divide(double a, double b)
+    static double Divide(double num1, double num2)
     {
-        if (b == 0)
+        if (num2 == 0)
         {
             Console.WriteLine("Error: Division by zero is not allowed.");
             return 0;
         }
-        return a / b;
+        return num1 / num2;
     }
 }
