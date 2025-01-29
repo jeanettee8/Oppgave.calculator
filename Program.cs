@@ -8,6 +8,7 @@ class Program
 
         while (running)
         {
+            // gives user multiple choices
             Console.WriteLine("Welcome to the Calculator!");
             Console.WriteLine();
             Console.WriteLine("Choose an operation:");
@@ -17,10 +18,13 @@ class Program
             Console.WriteLine("4. Division");
             Console.WriteLine("5. Exit");
 
+            //what the user writes, is assigned to the name choice
             string choice = Console.ReadLine();
 
             if (choice == "5")
             {
+                // running is false, and the while loop is "while running is true"
+                // = the while loop isn't active now
                 running = false;
                 Console.WriteLine("Exiting the calculator. Goodbye!");
                 continue;
@@ -30,6 +34,7 @@ class Program
             double num1;
             while (!double.TryParse(Console.ReadLine(), out num1))
             {
+                //if it can't parse = if they didn't write a number
                 Console.WriteLine("Invalid input. Please enter a valid number:");
             }
 
@@ -37,6 +42,7 @@ class Program
             double num2;
             while (!double.TryParse(Console.ReadLine(), out num2))
             {
+                 //if it can't parse = if they didn't write a number
                 Console.WriteLine("Invalid input. Please enter a valid number:");
             }
 
@@ -66,6 +72,7 @@ class Program
         }
     }
 
+    //methods used in the switch case
     static double Add(double num1, double num2)
     {
         return num1 + num2;
